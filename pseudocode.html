@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudocode - DSAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="assets/study.jpg" alt="Logo">DSAcademy</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="pseudocode.html" class="active">Pseudocode</a></li>
+                <li><a href="data-structures.html">Data Structures</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search pseudocode...">
+    </div>
+
+    <main class="container">
+        <h1>Pseudocode Library</h1>
+        <div class="grid">
+            
+            <div class="card search-item" data-aos="fade-up">
+                <h3>1. Bubble Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">REPEAT until no swaps:
+  FOR i = 0 to n-1:
+    IF A[i] > A[i+1]:
+       SWAP A[i], A[i+1]</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>2. Selection Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FOR i = 0 to n-1:
+  min = i
+  FOR j = i+1 to n:
+    IF A[j] < A[min] THEN min = j
+  SWAP A[i], A[min]</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>3. Insertion Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FOR i = 1 to n:
+  key = A[i]
+  j = i - 1
+  WHILE j >= 0 AND A[j] > key:
+    A[j+1] = A[j]
+    j = j - 1
+  A[j+1] = key</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>4. Linear Search</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FOR EACH element IN list:
+  IF element == target:
+     RETURN index
+RETURN -1</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>5. Binary Search</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">WHILE low <= high:
+  mid = (low + high) / 2
+  IF arr[mid] == x: RETURN mid
+  ELSE IF arr[mid] < x: low = mid + 1
+  ELSE: high = mid - 1</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>6. Factorial</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FUNCTION factorial(n):
+  IF n == 0 RETURN 1
+  RETURN n * factorial(n-1)</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>7. Fibonacci</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FUNCTION fib(n):
+  IF n <= 1 RETURN n
+  RETURN fib(n-1) + fib(n-2)</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>8. Quick Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FUNCTION quickSort(arr, low, high):
+  IF low < high:
+    p = partition(arr, low, high)
+    quickSort(arr, low, p - 1)
+    quickSort(arr, p + 1, high)</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>9. Merge Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FUNCTION mergeSort(arr):
+  IF length < 2 RETURN
+  mid = length / 2
+  L = mergeSort(arr[0..mid])
+  R = mergeSort(arr[mid..end])
+  merge(L, R)</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>10. Palindrome Check</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">rev = reverse(str)
+IF str == rev:
+  RETURN True
+ELSE:
+  RETURN False</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>11. Heap Sort</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">BUILD MaxHeap
+FOR i = n-1 to 1:
+  SWAP A[0], A[i]
+  Heapify(A, i, 0)</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>12. DFS Graph</h3>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-javascript">FUNCTION DFS(node):
+  visited[node] = true
+  PRINT node
+  FOR EACH neighbor OF node:
+    IF neighbor NOT visited:
+       DFS(neighbor)</code></pre></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h4>DSAcademy</h4><p>Your coding companion.</p></div>
+            <div class="footer-section"><h4>Explore</h4><ul><li><a href="algorithms.html">Algorithms</a></li><li><a href="pseudocode.html">Pseudocode</a></li></ul></div>
+            <div class="footer-section"><h4>Connect</h4><ul><li><a href="members.html">Team</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 DSAcademy.</p></div>
+    </footer>
+
+    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

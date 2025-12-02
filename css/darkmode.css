@@ -1,0 +1,28 @@
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: rgba(30, 30, 30, 0.9);
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    --footer-bg: #1a1a1a;
+    --border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #searchInput,
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode .hero {
+    background: radial-gradient(circle at top, rgba(108, 99, 255, 0.15), #121212);
+}
+
+body.dark-mode footer a { color: #bbbbbb; }
+body.dark-mode footer a:hover { color: var(--primary-color); }
+
+
+body.dark-mode::-webkit-scrollbar-track { background: #121212; }
+body.dark-mode::-webkit-scrollbar-thumb { background: #444; }

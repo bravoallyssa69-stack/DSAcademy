@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures - DSAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="assets/study.jpg" alt="Logo">DSAcademy</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="pseudocode.html">Pseudocode</a></li>
+                <li><a href="data-structures.html" class="active">Data Structures</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Data Structures</h1>
+        <div class="grid">
+            
+            <div class="card search-item" data-aos="fade-up">
+                <h3>1. Array</h3>
+                <p>Basic static collection.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">int arr[5] = {10, 20, 30, 40, 50};
+// Access: arr[0] -> 10
+// Update: arr[1] = 99</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>2. Stack (LIFO)</h3>
+                <p>Last In, First Out.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">stack&lt;int&gt; s;
+s.push(10);
+s.push(20);
+s.pop(); // Removes 20
+cout << s.top(); // 10</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>3. Queue (FIFO)</h3>
+                <p>First In, First Out.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">queue&lt;int&gt; q;
+q.push(10);
+q.push(20);
+q.pop(); // Removes 10
+cout << q.front(); // 20</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>4. Binary Tree</h3>
+                <p>Nodes with max 2 children.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">struct Node {
+  int data;
+  Node *left, *right;
+  Node(int val) { 
+    data = val; left=right=NULL; 
+  }
+};</code></pre></div>
+            </div>
+            
+            <div class="card search-item" data-aos="fade-up">
+                <h3>5. Infix to Postfix</h3>
+                <p>Expression conversion.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">// Use stack for operators
+// Print operands immediately
+// Pop based on precedence
+// If '(' push, if ')' pop until '('</code></pre></div>
+            </div>
+
+            <div class="card search-item" data-aos="fade-up">
+                <h3>6. Linked List</h3>
+                <p>Dynamic nodes with pointers.</p>
+                <div class="code-container"><button class="copy-btn">Copy</button><pre><code class="language-cpp">struct Node {
+  int data;
+  Node* next;
+};
+// Insert head
+void push(Node** head, int val) {
+  Node* n = new Node();
+  n->data = val;
+  n->next = (*head);
+  (*head) = n;
+}</code></pre></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h4>DSAcademy</h4><p>Your coding companion.</p></div>
+            <div class="footer-section"><h4>Explore</h4><ul><li><a href="algorithms.html">Algorithms</a></li><li><a href="pseudocode.html">Pseudocode</a></li></ul></div>
+            <div class="footer-section"><h4>Connect</h4><ul><li><a href="members.html">Team</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 DSAcademy.</p></div>
+    </footer>
+
+    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
